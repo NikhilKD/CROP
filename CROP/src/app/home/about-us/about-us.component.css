@@ -1,0 +1,112 @@
+#back-img {
+    background-image: url("src\assets\background.png");
+    background-color: #cccccc;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transform: rotate(180deg);
+    z-index: 2;
+}
+
+#about-back {
+    background-image: url("src\assets\About-background.png");
+    height: 95vh;
+    width: 100%;
+    top: 5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 4;
+}
+#about h2{
+    color: #13adfc;
+    font-size:3.5rem;
+    justify-content:center;
+    line-height:1.2em;
+    font-weight: 700;
+    margin-bottom: 3%;
+    padding-left: 2%;
+}
+#about p{
+    font-size:1.2rem;
+    color: white;
+    width: 100%;
+    justify-content: center;
+}
+#about{
+    transform: rotate(180deg);
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: 22%;
+}
+#vector-1 img{
+    width: 100%;
+}
+@media (min-width: 768px) and (max-width:991.98px){
+    #about{
+        top: 13%;
+    }
+    #about h2{
+        font-size:3rem;
+        padding-left: 2%;
+    }
+    #about p{
+        width: 397px;
+    }
+    #vector-1 img{
+        width: 195%;
+        margin-top: 20%;
+        position: relative;
+        left: 0%;
+        opacity: 28%;
+        display: flex;
+        z-index: 0;
+    }
+}
+@media (min-width: 453px) and (max-width:767.98px){
+    #about h2{
+        font-size:2.5rem;
+        padding-left: 2%;
+    }
+    #about p{
+        width: 302px;
+        text-align:justify ;
+        font-size: 1rem;
+    }
+    #vector-1 img{
+        width: 267%;
+        position: relative;
+        left: -60%;
+        opacity: 28%;
+        display: flex;
+        z-index: 2;
+    }
+} 
+@media (min-width: 425px) and (max-width:452.98px){
+    #about h2{
+        font-size:2rem;
+        text-align:justify ;
+        padding-left: 5%;
+    }
+    #about p{
+        width: 284px;
+        text-align: justify;
+    }
+    #about{
+        left: 8%;
+        top: 10%;
+    }
+    #vector-1 img{    
+    width: 452%;
+    margin-top: 20%;
+    position: relative;
+    left: 0%;
+    opacity: 28%;
+    display: flex;
+    z-index: 0;
+    }
+} 

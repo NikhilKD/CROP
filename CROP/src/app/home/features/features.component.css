@@ -1,0 +1,29 @@
+#back-img {
+    background-image: url("src\assets\background_2.png");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#features {
+    text-align: center;
+}
+#features h1{
+    padding-top: 12%;
+    color:white;
+    font-family: 'COUTUREBold';
+    font-size:3rem;
+}
+#boxes ul {
+    display:flex;
+    flex-direction:row;
+}
+#boxes ul li{
+    list-style: none;
+}
+
+#boxes ul li img{
+    width:100%;
+}
