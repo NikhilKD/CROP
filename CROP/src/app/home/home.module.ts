@@ -6,6 +6,7 @@ import { HeadingComponent } from './heading/heading.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FeaturesComponent } from './features/features.component';
 import { WebsitesComponent } from './websites/websites.component';
+import { BanksComponent } from './banks/banks.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { WebsitesComponent } from './websites/websites.component';
     HeadingComponent,
     AboutUsComponent,
     FeaturesComponent,
-    WebsitesComponent
+    WebsitesComponent,
+    BanksComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { WebsitesComponent } from './websites/websites.component';
     HeadingComponent,
     AboutUsComponent,
     FeaturesComponent,
-    WebsitesComponent
+    WebsitesComponent,
+    BanksComponent
   ]
 })
 export class HomeModule { }

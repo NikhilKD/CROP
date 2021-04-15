@@ -1,0 +1,34 @@
+#back-img {
+    background-image: url("src\assets\footer.png");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+#social ul {
+    display:flex;
+    flex-direction: row;
+}
+#social ul li{
+    list-style: none;
+}
+#social ul li img{
+    width: 20%;
+}
+#social{
+    position: absolute;
+    top: 73%;
+    left: 7%;
+}
+#social h2{
+    color:white;
+    padding-bottom: 5%;
+}
+
+@media (min-width:425px) and (max-width:699.98px){
+    #social ul li img{
+        width: 37%;
+    }
+}

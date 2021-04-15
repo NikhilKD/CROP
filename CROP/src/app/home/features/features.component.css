@@ -27,3 +27,13 @@
 #boxes ul li img{
     width:100%;
 }
+
+@media (min-width:425px) and (max-width:673.98px){
+    #features h1{
+        padding-top: 50%;
+        padding-left: 7%;
+        color:white;
+        font-family: 'COUTUREBold';
+        font-size:3rem;
+    }
+}

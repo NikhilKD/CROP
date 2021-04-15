@@ -8,11 +8,13 @@
 }
 #deals {
     text-align: center;
+    margin-top:10%;
+    margin-bottom:10%;
     
 }
 #deals h2{
     padding-top: 2%;
-    color:white;
+    color:black;
     font-family: 'COUTUREBold';
     font-size:3rem;
     margin-bottom: 5%;
@@ -35,14 +37,12 @@
     #deals {
         text-align: center;
         position: relative;
-        top:11%;
+        top:20%;
     }
 }
 @media (min-width:425px) and (max-width:673.98px){
     #deals h2{
         padding-top: 2%;
-        color:white;
-        font-family: 'COUTUREBold';
         font-size:2rem;
         margin-bottom: 5%;
     }
