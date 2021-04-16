@@ -32,3 +32,11 @@
         width: 37%;
     }
 }
+
+@media (min-width:320px) and (max-width:424.98px){
+    #social ul li img{
+        width: 56%;
+        position: relative;
+        left:-94%;
+    }
+}

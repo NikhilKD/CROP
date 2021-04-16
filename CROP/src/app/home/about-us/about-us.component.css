@@ -110,3 +110,26 @@
     z-index: 0;
     }
 } 
+@media (min-width: 320px) and (max-width:424.98px){
+    #about h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+    #about p{
+        margin-left: 7%;
+        width: 284px;
+        text-align: justify;
+    }
+    #about{
+        left: 8%;
+        top: 10%;
+    }
+    #vector-1 img{    
+    width: 96%;
+    position: absolute;
+    left: 10%;
+    opacity: 28%;
+    display: flex;
+    z-index: 0;
+    }
+} 

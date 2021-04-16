@@ -32,14 +32,13 @@
 #deals ul li img{
     width:48%;
 }
-
 @media (min-width:425px) and (max-width:991.98px){
     #deals {
         text-align: center;
         position: relative;
         top:20%;
     }
-}
+} 
 @media (min-width:425px) and (max-width:673.98px){
     #deals h2{
         padding-top: 2%;
@@ -48,6 +47,18 @@
     }
     #deals ul li img{
         width:86%;
+        margin-right: 4%;
+    }
+}
+@media (min-width:320px) and (max-width:424.98px){
+    #deals h2{
+        padding-top: 38%;
+        font-size:2rem;
+        margin-bottom: 5%;
+    }
+    #deals ul li img{
+        width: 100%;
+        margin-left: -62%;
     }
 
 }

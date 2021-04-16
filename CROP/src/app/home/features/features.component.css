@@ -22,10 +22,12 @@
 }
 #boxes ul li{
     list-style: none;
+    margin-left: 8%;
 }
 
 #boxes ul li img{
-    width:100%;
+    width:60%;
+    padding-top: 20%;
 }
 
 @media (min-width:425px) and (max-width:673.98px){
@@ -35,5 +37,23 @@
         color:white;
         font-family: 'COUTUREBold';
         font-size:3rem;
+    }
+}
+@media (min-width:320px) and (max-width:424.98px){
+    #features h1{
+        padding-top: 11%;
+        padding-left: 0%;
+        color:white;
+        font-family: 'COUTUREBold';
+        font-size:2rem;
+    }
+    #boxes ul {
+        display:flex;
+        flex-direction:column;
+    }
+    #boxes ul li img{
+        width: 43%;
+        margin-left: 22%;
+        padding-top: 10%;
     }
 }

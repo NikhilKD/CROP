@@ -97,4 +97,25 @@
         display: flex;
         z-index: 2;
     }
-} 
+}
+    @media (min-width: 320px) and (max-width:424.98px){
+        .content .textBox h2{
+            font-size:2rem;
+        }
+        .content{
+            position: relative;
+            margin-top: 60%;
+        }
+        .content .textBox p{
+            width: 284px;
+        }
+        #vector-1 img{
+            width: 138%;
+            margin-top: -108%;
+            position: relative;
+            left: -54%;
+            opacity: 40%;
+            display: flex;
+            z-index: 2;
+        }
+    }
