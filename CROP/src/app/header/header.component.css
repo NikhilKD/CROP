@@ -51,6 +51,8 @@ nav ul li a {
   text-decoration: none;
   font-family: "COUTUREBold";
   font-weight: bold;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
 nav ul li a:hover {
