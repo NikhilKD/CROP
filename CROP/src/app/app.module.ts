@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {HomeModule} from './home/home.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {ContactUsModule} from './contact-us/contact-us.module';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     HomeModule,
+    ContactUsModule,
     NgbModule
   ],
   providers: [],

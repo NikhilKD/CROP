@@ -7,6 +7,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { FeaturesComponent } from './features/features.component';
 import { WebsitesComponent } from './websites/websites.component';
 import { BanksComponent } from './banks/banks.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { BanksComponent } from './banks/banks.component';
     AboutUsComponent,
     FeaturesComponent,
     WebsitesComponent,
-    BanksComponent
+    BanksComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,

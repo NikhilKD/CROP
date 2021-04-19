@@ -1,0 +1,85 @@
+section {
+    position: relative;
+    width: 93%;
+    padding: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: #020018;
+  }
+  
+  nav .logo {
+    position: relative;
+    color: white;
+    font-family: "COUTUREBold";
+    font-weight: bold;
+    display: inline-block;
+    font-size: 2.4rem;
+    text-decoration: none;
+    font-weight: 800;
+  }
+  
+  nav a img {
+    height: 6vh;
+  }
+  nav ul {
+    position: relative;
+    display: flex;
+  }
+  nav ul li {
+    list-style: none;
+  }
+  nav ul li a {
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 0 16px;
+    position: relative;
+    left: 231px;
+    text-decoration: none;
+    font-family: "COUTUREBold";
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  #login {
+    background-color: #3c08f7;
+    border-radius: 20px;
+    margin-right: 5%;
+    font-size: 20px;
+    font-family: "COUTUREBold";
+    padding: 5px 23px;
+  }
+  #login a{
+      color:white;
+      text-decoration: none;
+  }
+  #login:hover{
+    background-color: #13adfc;
+  }
+  
+  nav ul li a:hover {
+    border-bottom: 2px solid #13adfc;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  
+  @media (max-width: 991.98px) {
+    nav ul {
+      display: none;
+    }
+  }
+  
