@@ -8,7 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import {HomeModule} from './home/home.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {ContactUsModule} from './contact-us/contact-us.module';
-
+import {LoginModule} from './login/login.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import {ContactUsModule} from './contact-us/contact-us.module';
     AppRoutingModule,
     HomeModule,
     ContactUsModule,
-    NgbModule
+    LoginModule,
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

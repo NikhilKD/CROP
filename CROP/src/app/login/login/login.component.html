@@ -1,0 +1,28 @@
+<div class="hero">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn" [style.left]="isActive?'110px':'0px'"></div>
+            <button type="button" class="toggle-btn" (click)="login()">LOGIN</button>
+            <button type="button" class="toggle-btn" (click)="register()">REGISTER</button>
+        </div>
+        <div class="social-icons">
+            <img src="../../../../../../../assets/social media icons/iconfinder_1_Facebook_colored_svg_copy_5296499.png" >
+            <img src="../../../../../../../assets/social media icons/iconfinder_2018_social_media_popular_app_logo_instagram_3225191.png" >
+            <img src="../../../../../../../assets/social media icons/iconfinder_1_Linkedin_unofficial_colored_svg_5296501.png" >
+        </div>
+        <form id="login" class="input-group" [style.left]="isActive?'-400px':'50px'">
+            <input type="text" class="input-field" placeholder="User Id" required>
+            <input type="password" class="input-field" placeholder="Enter Password" required>
+            <input type="checkbox" class="check-box"><span>RememberPassword</span>
+            <button type="submit" class="submit-btn">Log In</button>
+        </form>
+        <form id="register" class="input-group" [style.left]="isActive?'50px':'450px'">
+            <input type="text" class="input-field" placeholder="User Id" required>
+            <input type="email" class="input-field" placeholder="Email Id" required>
+            <input type="password" class="input-field" placeholder="Enter Password" required>
+            <input type="checkbox" class="check-box"><span>I agree to the form & condition</span>
+            <button type="submit" class="submit-btn">Sign In</button>
+        </form>
+    </div>
+</div>
+

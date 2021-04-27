@@ -10,6 +10,7 @@
 </head>
 <body>
   <app-root></app-root>
+  <script src="https://use.fontawesome.com/781a9a2af6.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -17,6 +18,19 @@
       duration: 1500,
     }
     );
+  </script>
+  <script>
+    const sign_in_btn = document.querySelector("#sign-in-btn");
+    const sign_up_btn = document.querySelector("#sign-up-btn");
+    const container = document.querySelector(".container1");
+
+  sign_up_btn.addEventListener("click", () => {
+    container.classList.add("sign-up-mode");
+  });
+
+  sign_in_btn.addEventListener("click", () => {
+    container.classList.remove("sign-up-mode");
+  });
   </script>
 </body>
 </html>

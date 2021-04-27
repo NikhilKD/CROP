@@ -1,4 +1,12 @@
-
+#back-img {
+    background-image: url("src\assets\background.png");
+    background-color: #cccccc;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 
 #heading h1{
     color: #1f04b9;
