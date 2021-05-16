@@ -9,6 +9,7 @@ import {HomeModule} from './home/home.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {ContactUsModule} from './contact-us/contact-us.module';
 import {LoginModule} from './login/login.module';
+import {CartModule} from './cart/cart.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ContactUsModule,
     LoginModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    CartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
