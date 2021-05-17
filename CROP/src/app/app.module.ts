@@ -11,6 +11,7 @@ import {ContactUsModule} from './contact-us/contact-us.module';
 import {LoginModule} from './login/login.module';
 import {CartModule} from './cart/cart.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginModule,
     NgbModule,
     FontAwesomeModule,
-    CartModule
+    CartModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
