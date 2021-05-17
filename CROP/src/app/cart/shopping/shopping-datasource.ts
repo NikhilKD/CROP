@@ -17,6 +17,7 @@ const EXAMPLE_DATA: ShoppingItem[] = [
   {id: 3, name: 'Lithium'},
   {id: 4, name: 'Beryllium'},
   {id: 5, name: 'Boron'},
+
 ];
 
 /**
