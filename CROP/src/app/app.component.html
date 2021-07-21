@@ -1,14 +1,30 @@
 <section>
-    <nav>
-        <a href="#" class="logo"><img src="../../../../../../../assets/CROP logo 1.png"> </a>
+    <nav class="nav-1" [style.position]="scroll?'fixed':'absolute'" [style.width]="scroll?'100vw':'98.8vw'" >
+        <a href="home" class="logo"><img src="../../../../../../../assets/CROP logo 1.png"> </a>
         <ul class="navigation" data-aos="slide-left">
+            <div class="container green borderXwidth">
             <li><a routerLink="home">Home</a></li>
-            <li><a href="">Info</a></li>
-            <li><a routerLink="contact">contact us</a></li>
-            <li><a href="cart">Cart</a></li>
+            <li><a routerLink="products">Products</a></li>
+            <li><a routerLink="contact">Contact us</a></li>
+            </div>
         </ul>
         <div id="login"><a routerLink="login">Login</a></div>
     </nav>
 </section>
+<div class="nav">
+    <input id="nav-toggle" type="checkbox">
+    <div class="logo"><img src="../../../../../../../assets/CROP logo 1.png"></div>
+    <ul class="links" id="borderXwidth">
+        <li><a routerLink="home">Home</a></li>
+        <li><a routerLink="products">Products</a></li>
+        <li><a routerLink="contact">Contact us</a></li>
+    </ul>
+    
+    <label for="nav-toggle" class="icon-burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </label>
+</div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

@@ -38,7 +38,8 @@
             ],
             "scripts": [
               "node_modules/skrollr/src/skrollr.js",
-              "node_modules/aos/src/js/aos.js"
+              "node_modules/aos/src/js/aos.js",
+              "node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {
@@ -129,6 +130,10 @@
               "devServerTarget": "CROP:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

@@ -1,0 +1,33 @@
+.content{
+    display:flex;
+    flex-direction: column;
+}
+.content h2{ 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top: 5%;
+}
+.products{
+    margin-top:3%;
+}
+mat-card img{
+    width:200px;
+    height: 300px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+mat-card h6{
+    align-items: center;
+    justify-content:center;
+    text-align:center;
+}
+@media (min-width:320px) and (max-width:799.98px){
+    mat-card {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+}

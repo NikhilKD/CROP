@@ -1,0 +1,54 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    margin-top:10%;
+}
+mat-card img{
+    width:100px;
+    height: 134px;
+}
+mat-card{
+    margin: 5%;
+    width:200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+mat-card h6{
+    align-items: center;
+    justify-content:center;
+    font-size:12px;
+    width:100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.buttons{
+    display: flex;
+}
+.buttons button{
+    margin:2%;
+}
+.fetch{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5%;
+}
+mat-dialog-content{
+    width:300px
+}
+.cart{
+    /* background-color: black; */
+    display: flex;
+    align-self: flex-end;
+    z-index: 200;
+    bottom: 0;
+    margin: 2%;
+    position: fixed;
+}

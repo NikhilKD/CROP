@@ -1,0 +1,39 @@
+<div class="content">
+    <h1  data-aos="fade-down">Details</h1>
+    <p>Enter the delivery details.</p>
+    <div class="form">
+        <form id="register" class="input-group" >
+            <input type="text" class="input-field" placeholder="Full Name:" required>
+            <input type="email" class="input-field" placeholder="Email ID:" required>
+            <input type="text" class="input-field" placeholder="Phone No:" min="0" max="10" required >
+            <span class="validity"></span>
+            <input type="text" class="input-field" placeholder="Address:" required>
+            <button type="submit" class="submit-btn" data-aos="fade-left" data-aos-offset="100" mat-button (click)="openDialog()" (click)="total()">Submit</button>
+        </form>
+    </div>
+    </div>
+  
+    <div class="content">
+        <h1  data-aos="fade-down">Cart History</h1>
+    </div>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" style="padding-left: 3%;">S.NO</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Amount</th>
+            <th scope="col" style="padding-left: 3%;">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of transaction; let i=index">
+            <td style="padding-left: 5%;" >{{i+1}}</td>
+            <td >{{transaction.item}}</td>
+            <td style="padding-left: 2%;">{{transaction.cost}} $</td>
+            <td>
+              <button (click)="delete(i)"type="button" class="btn btn-danger" >Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="submit" class="submit-btn" data-aos="fade-down" data-aos-offset="100" mat-button (click)="openDialog()" >Proceed To Pay</button>

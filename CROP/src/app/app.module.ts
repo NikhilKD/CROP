@@ -9,9 +9,12 @@ import {HomeModule} from './home/home.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {ContactUsModule} from './contact-us/contact-us.module';
 import {LoginModule} from './login/login.module';
-import {CartModule} from './cart/cart.module';
+import { ShoppingModule } from './shopping/shopping.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -27,8 +30,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginModule,
     NgbModule,
     FontAwesomeModule,
-    CartModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ShoppingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
