@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import{UserService} from '../../user.service';
+import UserService from 'src/app/user.service';
 import {MatDialog} from '@angular/material/dialog';
 
 
@@ -14,14 +14,24 @@ export class ShoppingComponent implements OnInit {
     this.user.getData().subscribe((data: any) =>
     {
       this.product=data,
-      console.log(this.product),
       this.fetch=false;
+      console.log(this.product);
     })
   }
+
   product:any=[];
   fetch=true;
   current:number=0;
   ngOnInit(): void {
+
+    // console.log(this.seller);
+    // this.user.fetchProducts().subscribe(
+    //   (response:any) => {
+    //     console.log(response);
+    //     this.seller=response;
+    //   },
+    //   (err:any)=> console.log(err)
+    //   );
     
   }
   openDialog(value:number) {
@@ -39,6 +49,28 @@ export class ShoppingComponent implements OnInit {
     this.list.push(item);
     console.log(this.list);
     this.user.list = this.list;
+  }
+  seller:any=[
+    { 
+      item:"Shirt",
+      description:"need A+ blood",
+      image:"https://images.pexels.com/photos/1884971/pexels-photo-1884971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      cost:300
+    }
+  ];
+  
+  addProduct(w:any,x:any,y:any,z:any){
+    console.log(this.seller);
+    this.seller.push({
+      item:x.value,
+      description:y.value,
+      image:w.value,
+      cost:z.value
+    });
+
+    this.user.saveProducts(this.seller).subscribe(
+      (response:any) => console.log(response),
+      (err:any)=> console.log(err));
   }
 }
 

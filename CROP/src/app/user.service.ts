@@ -2,20 +2,26 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { Router } from  "@angular/router";
-// import { auth } from  'firebase/app';
-import { AngularFireAuth } from  "@angular/fire/auth";
-// import { User } from  'firebase';
+import firebase from 'firebase/app';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export default class UserService {
   // user: User;
+  constructor(private http: HttpClient ) {
+  }
+  
+  
+  url='https://crop-593a3-default-rtdb.firebaseio.com/products.json';
+  private headers=new HttpHeaders({'Content-Type':'application/json'});
 
-  constructor(private http: HttpClient) {}
-    
-
-    
+    saveProducts(products:any[]){
+      return this.http.put(this.url,products,{headers:this.headers});
+    }
+    fetchProducts(){
+      return this.http.get(this.url);
+    }
     getData():any {
       let url="https://fakestoreapi.com/products";
       console.log(url);
@@ -34,4 +40,5 @@ export class UserService {
     set list(v:any){ 
       this.listItem.next(v);
     }
+
 }

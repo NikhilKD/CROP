@@ -1,5 +1,5 @@
 <div class="content">
-<h2>Shopping Point</h2>
+<h2 style="margin-bottom:5%">Shopping Point</h2>
 <div class="fetch" *ngIf=fetch >
     <div  class="spinner-border text-alert" role="status">
         <span class="visually-hidden"></span>
@@ -25,7 +25,37 @@
                 </mat-card>
             </div>
         </div>
+        <div class="row">
+            <div class="col" *ngFor="let v of seller;let i=index">
+                <mat-card >
+                    <h6 style="margin-bottom:4%">{{v.item}}</h6>
+                    <img src={{v.image}} >
+                    <h6 style="margin-top:4%">Price: {{v.cost}}$</h6>
+                    <div class="buttons">
+                        <button mat-raised-button (click)="openDialog(i)" color="primary">More</button>
+                        <button mat-raised-button (click)="add(i)"color="accent">Add Cart</button>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
     </div>
 </div>
-</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <h1  data-aos="fade-down">Add product</h1>
+    <p>Add your product for selling</p>
+    <div class="form">
+        <form id="register" class="input-group" >
+            <input type="text" class="input-field" placeholder="Product Name" #name required>
+            <input type="text" class="input-field" placeholder="Product Image" #image required>
+            <input type="text" class="input-field" placeholder="Product Description" #description required>
+            <input type="text" class="input-field" placeholder="Product Price" #cost required >
+            <button type="button" class="submit-btn" data-aos="fade-left" data-aos-offset="100" (click)="addProduct(image,name,description,cost)">ADD</button>
+        </form>
+    </div>
+    </div>
 <app-cart-history></app-cart-history>

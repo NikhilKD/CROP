@@ -1,6 +1,6 @@
 import { Component, Injectable,Inject, OnInit } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { UserService } from '../../user.service';
+import UserService from '../../user.service';
 
 export interface transaction {
   item: string;

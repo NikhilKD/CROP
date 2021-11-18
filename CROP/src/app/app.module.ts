@@ -13,8 +13,9 @@ import { ShoppingModule } from './shopping/shopping.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
-
-
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,10 @@ import {HttpClientModule} from '@angular/common/http';
     FontAwesomeModule,
     BrowserAnimationsModule,
     ShoppingModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule 
+
   ],
   providers: [],
   bootstrap: [AppComponent]
