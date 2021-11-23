@@ -24,14 +24,14 @@ export class ShoppingComponent implements OnInit {
   current:number=0;
   ngOnInit(): void {
 
-    // console.log(this.seller);
-    // this.user.fetchProducts().subscribe(
-    //   (response:any) => {
-    //     console.log(response);
-    //     this.seller=response;
-    //   },
-    //   (err:any)=> console.log(err)
-    //   );
+    console.log(this.seller);
+    this.user.fetchProducts().subscribe(
+      (response:any) => {
+        console.log(response);
+        this.seller=response;
+      },
+      (err:any)=> console.log(err)
+      );
     
   }
   openDialog(value:number) {

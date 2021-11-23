@@ -1,7 +1,6 @@
-import { Component, OnInit ,NgZone} from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import {AngularFireAuth} from '@angular/fire/auth';
-import { Router } from "@angular/router";
+import { Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
+import UserService from 'src/app/user.service';
 
 @Component({
   selector: 'app-log',
@@ -9,14 +8,32 @@ import { Router } from "@angular/router";
   styleUrls: ['./log.component.css']
 })
 export class LogComponent implements OnInit {
-  Form:FormGroup | undefined;
-  constructor(private fb:FormBuilder,public auth:AngularFireAuth,public router: Router,public ngZone:NgZone) { }
-
+  isSignedIn: boolean=false;
+  isRegistered: boolean=false;
+  constructor(public UserService: UserService,private router: Router) { }
   ngOnInit(): void {
-    this.Form=this.fb.group({
-      
-    })
-    
+    if(localStorage.getItem('user') !== null){
+    this.isSignedIn=true
+    }
+    else{
+    this.isSignedIn=false
+    this.isRegistered=false
+    }
+  }
+  async onSignup(email: string, password: string){
+    await this.UserService.signup(email, password)
+    if(this.UserService.isLoggedIn)
+    this.isSignedIn=true
+    console.log(this.isSignedIn);
+    this.isRegistered=true
+  }
+  async onSignin(email:string,password:string){
+    await this.UserService.signin(email,password)
+    if(this.UserService.isLoggedIn){
+    this.isSignedIn = true,
+    this.router.navigate(['/home']);
+    }
+    console.log(this.isSignedIn);
   }
   isActive:boolean=true;
   login(){
@@ -25,31 +42,8 @@ export class LogComponent implements OnInit {
   register(){
     this.isActive=true;
   }
-  logIn(email:any,password:any){
-    this.email=email.value;
-    this.password=password.value;
-    email.value="";
-    password.value="";
-    console.log(email);
-    console.log(password);
-    this.auth.signInWithEmailAndPassword(this.email,this.password).catch(err =>
-      { 
-        console.log(err);
-        console.log("Password incorrect")
-    }).then(res => 
-      {
-        console.log(res);
-        this.ngZone.run(() => {
-          this.router.navigate(['home']);
-        });
-    });
+  handleLogout(){
+    this.isSignedIn = false
 
   }
-
-  signIn(semail:any,spassword:any){
-  }
-
-  email=" ";
-  password=" ";
-
 }

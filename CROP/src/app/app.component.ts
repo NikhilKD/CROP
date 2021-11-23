@@ -1,4 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Output, EventEmitter, OnInit} from '@angular/core';
+import UserService from 'src/app/user.service';
 
 declare var $: any;
 
@@ -11,6 +12,9 @@ declare var $: any;
 export class AppComponent implements OnInit {
   title = 'CROP';
   scroll=false;
+  @Output() isLogout = new EventEmitter<void>()
+  constructor(public UserService: UserService) { }
+
   ngOnInit() {
   }
   number:any=0;
@@ -20,5 +24,8 @@ export class AppComponent implements OnInit {
       this.scroll=true;
     }
   }
- 
+  logout(){
+    this.UserService.logout()
+    this.isLogout.emit()
+  }
 }

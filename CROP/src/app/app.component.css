@@ -103,18 +103,23 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
     width: 100%;
 }
 
-  #login {
+  button {
     border: 1px solid #ffff;
     border-radius: 20px;
     margin-right: 5%;
     font-size: 20px;
     font-family: "COUTUREBold";
     padding: 1px 30px;
+    background-color:black;
   }
-  #login a{
+  button a{
       color:white;
       text-decoration: none;
   }
+  button a:hover{
+    color:white;
+    text-decoration: none;
+}
 
   
   @media (min-width: 320px) and (max-width: 991.98px) {

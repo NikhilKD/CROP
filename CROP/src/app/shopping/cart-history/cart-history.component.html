@@ -36,4 +36,20 @@
           </tr>
         </tbody>
       </table>
-      <button type="submit" class="submit-btn" data-aos="fade-down" data-aos-offset="100" mat-button (click)="openDialog()" >Proceed To Pay</button>
+      <div class="total">
+      <p>Total: {{amount}} &#36;</p>
+      <button type="button" class="btn btn-primary" style="align-items: center;justify-content: center"(click)="total()">Get Total</button>
+    </div>
+      <google-pay-button
+        environment="TEST"
+        button type="buy"
+        buttonColor="black"
+        [paymentRequest]="paymentRequest"
+        (loadpaymentdata)="onLoadPaymentData($event)"
+        (error)="onError($event)"
+        [paymentAuthorizedCallback]="onPaymentDataAuthorized"
+        mat-button (click)="openDialog()"
+        class="submit-btn"
+
+      >
+      </google-pay-button>

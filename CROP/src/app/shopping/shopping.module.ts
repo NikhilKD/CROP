@@ -8,6 +8,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { CartHistoryComponent } from './cart-history/cart-history.component';
+import { GooglePayButtonModule } from '@google-pay/button-angular';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CartHistoryComponent } from './cart-history/cart-history.component';
     MatCardModule,
     HttpClientModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    GooglePayButtonModule
   ]
 })
 export class ShoppingModule { }

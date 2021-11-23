@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {LogComponent} from './log/log.component';
 
 const routes: Routes = [
-  { path:'login',component: LogComponent}
+  { path:'',component: LogComponent}
 ];
 
 @NgModule({

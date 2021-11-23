@@ -10,25 +10,25 @@
             <img src="../../../../../../../assets/social media icons/iconfinder_2018_social_media_popular_app_logo_instagram_3225191.png" >
             <img src="../../../../../../../assets/social media icons/iconfinder_1_Linkedin_unofficial_colored_svg_5296501.png" >
         </div>
-        <form  id="login" class="input-group" [style.left]="isActive?'-400px':'50px'">
-            <input #lemail type="email" class="input-field" placeholder="User Id" required>
-            <input #lpassword type="password" class="input-field" placeholder="Enter Password" required>
+        <form id="login" class="input-group" [style.left]="isActive?'-400px':'50px'">
+            <input #email type="email" class="input-field" placeholder="User Id" required>
+            <input #password type="password" class="input-field" placeholder="Enter Password" required>
             <div class="remember">
             <input type="checkbox" class="check-box"><span>RememberPassword</span>
             </div>
-            <button type="submit" class="submit-btn" (click)="logIn(lemail,lpassword)" [style.display]="isActive?'none':'flex'">Log In</button>
+            <button type="submit" class="submit-btn" (click)="onSignin(email.value,password.value)"[style.display]="isActive?'none':'flex'">Log In</button>
         </form>
         <form id="register" class="input-group" [style.left]="isActive?'50px':'450px'">
-            <input type="text" class="input-field" placeholder="User Id" required>
-            <input #semail type="email" class="input-field" placeholder="Email Id" required>
-            <input #spassword type="password" class="input-field" placeholder="Enter Password" required>
+            <input #emailSignup type="email" class="input-field" placeholder="Email Id" required>
+            <input #passwordSignup type="password" class="input-field" placeholder="Enter Password" required>
             <div class="terms">
             <input type="checkbox" class="check-box" required><span>I agree to the form & condition</span>
             </div>
-            <button type="submit" class="submit-btn" (click)="signIn(lemail,lpassword)" [style.display]="isActive?'flex':'none'">Sign In</button>
+            <button type="submit" class="submit-btn" (click)="onSignup(emailSignup.value,passwordSignup.value)" [style.display]="isActive?'flex':'none'">Sign In</button>
         </form>
     </div>
-    
-    
+    <div class="board" [style.display]="isRegistered?'flex':'none'">
+        <h2>Successfully Feeded</h2>
+    </div>
 </div>
 
